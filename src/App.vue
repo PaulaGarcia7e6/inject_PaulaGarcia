@@ -2,7 +2,7 @@
   <header>
     <h1>{{ nombreComanda }}</h1>
     <input type="text" name="" id="" v-model="nombreComanda">
-    <input type="submit" value="Place Order" id="placeOrder">
+    <input type="submit" value="Place Order" id="placeOrder" @click="placeOrder()">
   </header>
 
   <main>
@@ -41,6 +41,9 @@ const recibirHijo = (data: string) => {
   //console.log(data)
   arrayComanda.push(data);
   alert(arrayComanda)
+}
+function placeOrder() {
+  alert('Your order has been placed!')
 }
 </script>
 
