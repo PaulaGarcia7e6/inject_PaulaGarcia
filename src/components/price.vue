@@ -6,9 +6,9 @@ import { inject, ref, watch } from 'vue';
 const props = defineProps({
   precio:Number,
 });
-const emitComanda = defineEmits(['nomProducte'])
 const moneda= ref<string>(inject<string>('moneda',''))
 let precioConvertido = props.precio
+
 watch(moneda, () => {
   console.log(moneda.value)
   if (moneda.value == '$') {

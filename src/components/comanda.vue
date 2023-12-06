@@ -14,7 +14,9 @@ import { defineEmits } from 'vue';
 const props = defineProps<{
     producte: Producto,
 }>()
-const emitPadre = defineEmits(['nomProducte'])
+const emitPadre = defineEmits<{
+  (e: 'nomProducte', value: string): void
+}>()
 function addcomand(producte:string) {
     emitPadre('nomProducte',props.producte.name)
 }
