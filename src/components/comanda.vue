@@ -1,7 +1,7 @@
 <template>
     <li>
         <p>
-            {{ props.producte.name }} {{ props.producte.price }}<price/>
+            {{ props.producte.name }} <price :precio="props.producte.price"/>
         </p>
         <button @click="addcomand(props.producte.name)">Add to Cart</button>
     </li>
